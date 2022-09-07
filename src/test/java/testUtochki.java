@@ -8,7 +8,7 @@ import java.util.List;
 
 public class testUtochki {
     @Test
-    public void FirstSelenimTest() throws InterruptedException {
+    public void FirstSelenimTest() {
         WebDriver driver  = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://the-internet.herokuapp.com");
@@ -16,7 +16,6 @@ public class testUtochki {
         List<WebElement> elements = driver.findElements(By.tagName("a"));
         System.out.println(elements.size());
         elements.get(9).click();
-        Thread.sleep(2000);
         driver.quit();
     }
 }
